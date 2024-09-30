@@ -1,11 +1,13 @@
-﻿namespace Uppgift._6
-{
-    class Program
-    {
+﻿using System.Diagnostics;
 
+namespace Uppgift._6
+{
+    internal class Program
+    {
+        private static List<string> names = new List<string> { "Anna", "John", "Alice", "Bob" };
         static void Main(string[] args)
         {
-            List<string> names = new List<string> { "Anna", "John", "Alice", "Bob" };
+
             Console.WriteLine("Original list:");
             foreach (var name in names)
             {
@@ -31,6 +33,21 @@
             }
             Console.ReadKey();
         }
+
+        public static void PrintOriginalList()
+        {
+
+        }
+        public static void PrintSortedList()
+        {
+
+        }
+        public static void SearchName()
+        {
+
+        }
+
+
     }
 
 }
