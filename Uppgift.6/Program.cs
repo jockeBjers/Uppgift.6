@@ -7,19 +7,34 @@ namespace Uppgift._6
         private static List<string> names = new List<string> { "Anna", "John", "Alice", "Bob" };
         static void Main(string[] args)
         {
+            PrintOriginalList();
+            PrintSortedList();
+            SearchName();
+         
 
+          
+        }
+
+        public static void PrintOriginalList()
+        {
             Console.WriteLine("Original list:");
             foreach (var name in names)
             {
                 Console.WriteLine(name);
             }
-
+        }
+        public static void PrintSortedList()
+        {
             names.Sort();  // Sort the names alphabetically
             Console.WriteLine("\nSorted list:");
             foreach (var name in names)
             {
                 Console.WriteLine(name);
             }
+
+        }
+        public static void SearchName()
+        {
 
             Console.WriteLine("\nEnter name to search:");
             string searchName = Console.ReadLine();
@@ -32,19 +47,6 @@ namespace Uppgift._6
                 Console.WriteLine($"{searchName} is not in the list.");
             }
             Console.ReadKey();
-        }
-
-        public static void PrintOriginalList()
-        {
-
-        }
-        public static void PrintSortedList()
-        {
-
-        }
-        public static void SearchName()
-        {
-
         }
 
 
