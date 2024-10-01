@@ -9,18 +9,18 @@ namespace Uppgift._6
     internal class LogicHandler
     {
 
-        private List<string> names = new List<string> { "Anna", "John", "Alice", "Bob" };
-        public void PrintSortedList()
+        private static List<string> names = new List<string> { "Anna", "John", "Alice", "Bob" }; //Define list
+        public static void PrintSortedList()
         {
-            names.Sort();
+            names.Sort(); //Sorting the list
             Console.WriteLine("\nSorted list:");
-            foreach (var name in names)
+            foreach (var name in names) //prints out all the names in the list
             {
                 Console.WriteLine(name);
             }
         }
 
-        public void SearchName(string searchName)
+        public static void SearchName(string searchName) //Takes the input from the user and check if it exists.
         {
             if (names.Contains(searchName))
             {
@@ -32,15 +32,23 @@ namespace Uppgift._6
             }
         }
 
-        public void AddName(string name)
+        public static void AddName(string name)
         {
-            names.Add(name);
-            Console.WriteLine($"{name} has been added to the list.");
+            if (string.IsNullOrWhiteSpace(name)) // Safety if input is empty.
+            {
+                Console.WriteLine("Invalid input. Name cannot be empty or just whitespace.");
+            }
+            else
+            {
+                names.Add(name); //If safe it is added to the list.
+                Console.WriteLine($"{name} has been added to the list.");
+            }
         }
 
-        public void RemoveName(string name)
+
+        public static void RemoveName(string name)
         {
-            if (names.Remove(name))
+            if (names.Remove(name)) // If name matches, it is removed
             {
                 Console.WriteLine($"{name} has been removed from the list.");
             }

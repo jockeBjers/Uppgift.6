@@ -4,12 +4,11 @@ namespace Uppgift._6
 {
     internal class Program
     {
-        private static List<string> names = new List<string> { "Anna", "John", "Alice", "Bob" }; // Put list outside of main for easier access.
-
         static void Main(string[] args)
         {
-            RunProgram();
-          
+            UserInterface.RunProgram(); 
+            //Separated the program into two classes of which one handles the user input, and one handles the magic behind.
+            // With things separated into smaller classes and methods, we would be able to scale this program but still maintain the readability and flexibilty.
         }
 
     }
