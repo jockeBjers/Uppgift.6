@@ -53,6 +53,7 @@ namespace Uppgift._6
         }
         public static void SearchName()
         {
+            Console.WriteLine("Enter a name to search for:");
             string name = Console.ReadLine();
             LogicHandler.SearchName(name);
         }
